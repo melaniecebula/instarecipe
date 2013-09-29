@@ -4,33 +4,19 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/masonry.pkgd.min.js"></script>
-<script>
-var urlArray = window.location.hash.split('=');
-var accessToken = urlArray[1];
-
-console.log(accessToken);
-
-$.ajax({
-type: "GET",
-dataType: "jsonp",
-cache: false,
-url: "https://api.instagram.com/v1/tags/recipeshare/media/recent?client_id=452916002&access_token=" + accessToken,
-
-success: function(data) {
-console.log(data);
-for (var i = 0; i < 20; i++) {
-console.log(data.data[i].caption.text);
-$(".pics").append("<a class='foodPic' target='_blank' href='" + data.data[i].link +
-    "'><img src='" + data.data[i].images.low_resolution.url +"'></img></a>");
-}}
-});
-</script>
 </head>
 
 <body>
 <div id="container">
-<div> <h1 id="title"> instarecipe </h1> </div>
-<div class="pics"></div>
+  <div> <h1 id="title"> instarecipe </h1> </div>
+</div>
+<div class="pics">
+  <% for(var i = 0; i < 20; i++) {%>
+    <a class='foodPic' target='_blank' href="<%= links[i] %>">
+    <img src="<%= images[i] %>"></img>
+  </a>
+  <% } %>
 </div>
 </body>
+
 </html>
