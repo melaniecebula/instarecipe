@@ -21,6 +21,7 @@ app.get("/", function(req,res) {
           thumbnail: data.data[i].images.low_resolution.url,
           image: data.data[i].images.standard_resolution.url,
           description: data.data[i].caption.text,
+          username: data.data[i].caption.from.username,
         });
       }
 
