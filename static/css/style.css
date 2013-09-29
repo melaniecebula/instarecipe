@@ -1,10 +1,12 @@
 #title {
-    float:left;
+  float:left;
   text-align:left;
   font-size: 50px;
-  padding-left:20px;
+  padding-left:50px;
   padding-bottom:10px
+  color: red;
 }
+
 h1 {
     display:inline-block;
 }
@@ -12,9 +14,9 @@ h1 {
 #title2 {
     float:left;
     text-align:left;
-    opacity:0.7;
-    font-size:48px;
-    padding-boom:10px
+    opacity:0.6;
+    font-size:50px;
+    padding-bottom:10px
 }
 
 #container {
@@ -31,6 +33,12 @@ h1 {
 }
 .clear {
   clear: both;
+}
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-
+  display: inline-block;
 }
 @-webkit-keyframes image_blur {
   0% { -webkit-filter: blur(0px);}
