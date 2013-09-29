@@ -4,7 +4,7 @@
     padding-bottom:10px}
 .pics {margin-left:auto;
     margin-right:auto}
-img {
+.foodPic {
     /*BLUR*/
     padding: 15px;
     -webkit-transition: all 0.3s ease;
@@ -13,7 +13,13 @@ img {
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-img:hover {
+.foodPic:hover {
     -webkit-filter: blur(4px);
     /*-webkit-filter: brightness(50%);*/
 }
+
+#modalImage {
+    width: 400px;
+    height: 400px;
+}
+
