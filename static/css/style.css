@@ -1,21 +1,28 @@
 #title {text-align:left;
-    font-size: 50px;
-    padding-left:20px;
-    padding-bottom:10px}
+  font-size: 50px;
+  padding-left:20px;
+padding-bottom:10px}
 .pics {margin-left:auto;
-    margin-right:auto}
-.foodPic {
-    /*BLUR*/
-    padding: 15px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+margin-right:auto}
+
+@-webkit-keyframes image_blur {
+  0% { -webkit-filter: blur(0px);}
+  50% { -webkit-filter: blur(5px);}
+  100% { -webkit-filter: blur(0px);}
 }
+
+.foodPic {
+  /*BLUR*/
+  padding: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .foodPic:hover {
-    -webkit-filter: blur(4px);
-    /*-webkit-filter: brightness(50%);*/
+  -webkit-animation: image_blur 0.75s; 
 }
 
 #modalImage {

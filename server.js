@@ -26,7 +26,8 @@ app.get("/", function(req,res) {
 
       res.render("index.ejs", {recipes: recipes});
     } else {
-      console.log(error);
+      console.log("Error", error);
+      console.log("Res", response);
     }
   });
 });
