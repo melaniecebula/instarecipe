@@ -19,8 +19,8 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title">Cool recipe yay!!!</h4>
       </div>
-      <div id="content-and-not-happy" class="modal-body">
-      </div>
+      <img id="modalImage"></img>
+      <div id="content-and-not-happy" class="modal-body"></div>
       <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">Close</a>
       </div>
@@ -32,6 +32,7 @@
   <% for(var i = 0; i < 20; i++) {%>
     <img class='foodPic' id="recipe<%= i %>" src="<%= recipes[i].thumbnail %>"></img>
     <div id="description<%= i %>" style="display: none"><%= recipes[i].description %></div>
+    <div id="image<%= i %>" style="display: none"><%= recipes[i].image %></div>
   <% } %>
 </div>
 </body>
@@ -42,7 +43,9 @@ $(function() {
     (function(i) {
     $('#recipe' + i).click(function(e) {
       var des = $('#description' + i).html();
+      var img = $('#image' + i).html();
       $('#content-and-not-happy').html(des);
+      $('#modalImage').attr('src', img);
       $('#myModal').modal('show'); 
     });
     })(j);
