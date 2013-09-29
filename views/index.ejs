@@ -19,7 +19,7 @@ url: "https://api.instagram.com/v1/tags/recipeshare/media/recent?client_id=45291
 success: function(data) {
 console.log(data);
 for (var i = 0; i < 20; i++) {
-console.log(data.data[i].likes.count);
+console.log(data.data[i].caption.text);
 $(".pics").append("<a class='foodPic' target='_blank' href='" + data.data[i].link +
     "'><img src='" + data.data[i].images.low_resolution.url +"'></img></a>");
 }}
