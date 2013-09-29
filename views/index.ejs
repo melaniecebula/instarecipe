@@ -7,33 +7,37 @@
 </head>
 
 <body>
-<div id="container">
-  <div> <h1 id="title"> instarecipe </h1> </div>
-</div>
+<div class="outer-center">
+  <div class="inner-center">
+    <div id="container">
+      <div> <h1 id="title"> instarecipe </h1> </div>
 
-<!-- Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Cool recipe yay!!!</h4>
-      </div>
-      <img id="modalImage"></img>
-      <div id="content-and-not-happy" class="modal-body"></div>
-      <div class="modal-footer">
-        <a href="#" class="btn" data-dismiss="modal">Close</a>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+      <!-- Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Cool recipe yay!!!</h4>
+            </div>
+            <img id="modalImage"></img>
+            <div id="content-and-not-happy" class="modal-body"></div>
+            <div class="modal-footer">
+              <a href="#" class="btn" data-dismiss="modal">Close</a>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
-<div class="pics">
-  <% for(var i = 0; i < 20; i++) {%>
-    <img class='foodPic' id="recipe<%= i %>" src="<%= recipes[i].thumbnail %>"></img>
-    <div id="description<%= i %>" style="display: none"><%= recipes[i].description %></div>
-    <div id="image<%= i %>" style="display: none"><%= recipes[i].image %></div>
-  <% } %>
+      <div class="pics">
+        <% for(var i = 0; i < 20; i++) {%>
+          <img class='foodPic' id="recipe<%= i %>" src="<%= recipes[i].thumbnail %>"></img>
+        <div id="description<%= i %>" style="display: none"><%= recipes[i].description %></div>
+        <div id="image<%= i %>" style="display: none"><%= recipes[i].image %></div>
+      <% } %>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 
@@ -41,13 +45,13 @@
 $(function() {
   for (var j = 0; j < 20; j++) {
     (function(i) {
-    $('#recipe' + i).click(function(e) {
-      var des = $('#description' + i).html();
-      var img = $('#image' + i).html();
-      $('#content-and-not-happy').html(des);
-      $('#modalImage').attr('src', img);
-      $('#myModal').modal('show'); 
-    });
+      $('#recipe' + i).click(function(e) {
+        var des = $('#description' + i).html();
+        var img = $('#image' + i).html();
+        $('#content-and-not-happy').html(des);
+        $('#modalImage').attr('src', img);
+        $('#myModal').modal('show'); 
+      });
     })(j);
   }
 });

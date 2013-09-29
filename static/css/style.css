@@ -1,10 +1,23 @@
-#title {text-align:left;
+#title {
+  text-align:left;
   font-size: 50px;
   padding-left:20px;
-padding-bottom:10px}
-.pics {margin-left:auto;
-margin-right:auto}
-
+  padding-bottom:10px
+}
+#container {
+  margin-left:auto;
+  margin-right:auto
+}
+.outer-center {
+  width:100%;
+  text-align: center;
+}
+.inner-center {
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
 @-webkit-keyframes image_blur {
   0% { -webkit-filter: blur(0px);}
   50% { -webkit-filter: blur(5px);}
@@ -26,6 +39,6 @@ margin-right:auto}
 }
 
 #modalImage {
-    width: 100%;
+  width: 100%;
 }
 
