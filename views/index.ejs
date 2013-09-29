@@ -17,10 +17,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">Cool recipe yay!!!</h4>
       </div>
       <div id="content-and-not-happy" class="modal-body">
-        ...
       </div>
       <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">Close</a>
@@ -32,7 +31,7 @@
 <div class="pics">
   <% for(var i = 0; i < 20; i++) {%>
     <img class='foodPic' id="recipe<%= i %>" src="<%= recipes[i].thumbnail %>"></img>
-    <div id="description<%= i %>" style="visibility: hidden"><%= recipes[i].description %></div>
+    <div id="description<%= i %>" style="display: none"><%= recipes[i].description %></div>
   <% } %>
 </div>
 </body>
