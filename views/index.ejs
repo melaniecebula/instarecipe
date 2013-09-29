@@ -4,6 +4,11 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/masonry.pkgd.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('.foodPic').click(function(e) { console.log(e);});
+});
+</script>
 </head>
 
 <body>
@@ -12,9 +17,7 @@
 </div>
 <div class="pics">
   <% for(var i = 0; i < 20; i++) {%>
-    <a class='foodPic' target='_blank' href="<%= links[i] %>">
-    <img src="<%= images[i] %>"></img>
-  </a>
+    <img class='foodPic' src="<%= images[i] %>"></img>
   <% } %>
 </div>
 </body>
