@@ -12,9 +12,9 @@
 </div>
 <div class="pics">
   <% for(var i = 0; i < 20; i++) {%>
-    <a class='foodPic' target='_blank' href="<%= links[i] %>">
-    <img src="<%= images[i] %>"></img>
-  </a>
+   <img src="<%= recipes[i].thumbnail %>"></img>
+   <p><%= recipes[i].description %></p>
+   <p><%= recipes[i].image %></p>
   <% } %>
 </div>
 </body>

@@ -15,18 +15,16 @@ app.get("/", function(req,res) {
   request.get(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       data = JSON.parse(body);
-      links = [];
-      images = [];
-      console.log(data);
+      recipes = [];
       for (var i = 0; i < 20; i++) {
-        links.push(data.data[i].link);
-        images.push(data.data[i].images.low_resolution.url);
+        recipes.push({
+          thumbnail: data.data[i].images.low_resolution.url,
+          image: data.data[i].images.standard_resolution.url,
+          description: data.data[i].caption.text,
+        });
       }
 
-      console.log(links);
-      console.log(images);
-
-      res.render("index.ejs", {links: links, images: images});
+      res.render("index.ejs", {recipes: recipes});
     } else {
       console.log(error);
     }
